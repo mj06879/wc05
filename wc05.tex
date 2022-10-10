@@ -17,7 +17,7 @@
 \printanswers
 
 \title{Weekly Challenge 05: Ambiguity in Context-Free Grammars}
-\author{mj06879} % <=== replace with your student ID, e.g. xy012345
+\author{ungraded} % <=== replace with your student ID, e.g. xy012345
 \date{CS 212 Nature of Computation\\Habib University\\Fall 2022}
 
 \qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
@@ -38,41 +38,7 @@
   \end{align*}
   
   \begin{solution}
-    % Enter your solution here.
-    According to Definition 2.7 of Textbook:
-    \begin{center}
-    ``A string $w$ is derived $\mathbf{ambiguously}$ in context-free grammar $G$ if
-it has two or more different leftmost derivations. Grammar $G$ is
-ambiguous if it generates some string ambiguously."
-    \end{center}
-Here we are doing proof by contradiction by taking string $w$ = $``\mathbf{abba}"$ that can be derived by two different leftmost derivations to show that the given CFG is ambiguous. \\
-\textbf{Note:} we are not limiting that these are the only derivations for this string.\\
-On left hand side of derivations we are underlining the Variable that is going to be converted.\\
-\underline{\textbf{First Derivation:}}
-\[ \underline{S} \to AS , \text{ \hspace{1cm} Using S $\to$ AS}\]
-\[  \underline{A}S \to aS , \text{ \hspace{1cm} Using A $\to$ a}\]
-\[ a \underline{S} \to aAS, \text{ \hspace{1cm} Using S $\to$ AS}\]
-\[ a \underline{A}S \to aBAS,  \text{ \hspace{1cm} Using A $\to$ BA}\]
-\[ a \underline{B}AS \to abAS, \text{ \hspace{1cm} Using B $\to$ b} \]
-\[ ab \underline{A}S \to abBAS, \text{\hspace{1cm} Using A $\to$ BA} \]
-\[ ab \underline{B}AS  \to abbAS, \text{ \hspace{1cm} Using B $\to$ b}\]
-\[ abb \underline{A}S \to abbaS , \text{ \hspace{1cm} Using A $\to$ a}\]
-\[ abba \underline{S} \to abba  , \text{ \hspace{1cm} Using S $\to$ $\epsilon$}\]
-
-\underline{\textbf{Second Derivation:}}
-\[ \underline{S} \to AS , \text{ \hspace{1cm} Using S $\to$ AS}\]
-\[ \underline{A} S \to BAS , \text{ \hspace{1cm} Using A $\to$ BA}\]
-\[ \underline{B}AS \to SBAS , \text{ \hspace{1cm} Using B $\to$ SB}\]
-\[ \underline{S} BAS \to ASBAS , \text{ \hspace{1cm} Using S $\to$ AS}\]
-\[ \underline{A} SBAS \to aSBAS , \text{ \hspace{1cm} Using A $\to$ a}\]
-\[ a\underline{S}BAS \to aBAS , \text{ \hspace{1cm} Using S $\to$ $\epsilon$}\]
-\[ a\underline{B}AS \to abAS , \text{ \hspace{1cm} Using B $\to$ b}\]
-\[ ab\underline{A}S \to abBAS , \text{ \hspace{1cm} Using A $\to$ BA}\]
-\[ ab\underline{B}AS \to abbAS , \text{ \hspace{1cm} Using B $\to$ b}\]
-\[ abb\underline{A}S \to abbaS , \text{ \hspace{1cm} Using A $\to$ a}\]
-\[ abba\underline{S} \to abba, \text{ \hspace{1cm} Using S $\to$ $\epsilon$}\]
-
-Now, we have shown that there is a string $w = ``abba"$ that is derived ambiguously by the given CFG, so the given CFG is ambiguous. Hence Proved!
+  
   \end{solution}
 \end{questions}
 \end{document}
